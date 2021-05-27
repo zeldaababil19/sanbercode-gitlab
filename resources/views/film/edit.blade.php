@@ -1,9 +1,5 @@
 @extends('layout.master')
 
-@section('title')
-    Ubah film id ke {{$film->id}}
-@endsection
-
 @section('content')
 
         <form action="/film/{{$film->id}}" method="POST" enctype="multipart/form-data">

@@ -5,7 +5,7 @@
 <!-- Product Section Begin -->
 <section class="product spad">
     <div class="container">
-        <a href="film/create" class="btn btn-primary btn-sm mb-3">Tambah Film</a>
+        <a href="film/create" class="btn btn-primary btn-sm mb-3">Tambah Anime</a>
         <div class="row">
             <div class="col-lg-8">
                 <div class="trending__product">

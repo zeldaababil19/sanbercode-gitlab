@@ -13,6 +13,10 @@
 <br>
 <h6>Genre</h6>
 @foreach ($genre as $value)
-<span class="btn btn-primary btn-sm my-3">{{$value->nama}}</span>
+@if ($value->id == $film->genre_id)
+<span class="btn btn-primary btn-sm my-3" value="{{$value->id}}">{{$value->nama}}</span>
+                    @else
+                    {{-- <span class="btn btn-secondary btn-sm my-3" value="{{$value->id}}">{{$value->nama}}</span> --}}
+                    @endif
 @endforeach 
 @endsection

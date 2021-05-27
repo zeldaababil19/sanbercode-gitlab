@@ -49,7 +49,7 @@ class FilmController extends Controller
         ]);
 
         $gambar = $request -> poster;
-        $name_img = time(). ' - '. $gambar->getClientOriginalName();
+        $name_img = time(). '-'. $gambar->getClientOriginalName();
 
         film::create([
             'judul' => $request->judul,

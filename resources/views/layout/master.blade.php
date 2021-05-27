@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="{{asset('anime/css/owl.carousel.min.css')}}" type="text/css">
     <link rel="stylesheet" href="{{asset('anime/css/slicknav.min.css')}}" type="text/css">
     <link rel="stylesheet" href="{{asset('anime/css/style.css')}}" type="text/css">
+    
 </head>
 
 <body>
