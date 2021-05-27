@@ -17,36 +17,11 @@ Route::group(['middleware' => ['auth']], function () {
 
 Route::get('/', 'FilmController@index');
 
-Route::get('/pendaftaran', 'DaftarController@daftar');
-
-Route::post('/daftar', 'DaftarController@submit');
-
-Route::get('/table', function(){
-  return view('table.table');
-});
-
-Route::get('/data-table', function(){
-  return view('table.data-table');
-});
-
-
 // CRUD Cast
-Route::get('/cast', 'CastController@index');
-Route::get('/cast/create', 'CastController@create');
-Route::post('/cast', 'CastController@store');
-Route::get('/cast/{cast_id}', 'CastController@show');
-Route::get('/cast/{cast_id}/edit', 'CastController@edit');
-Route::put('/cast/{cast_id}', 'CastController@update');
-Route::delete('/cast/{cast_id}', 'CastController@destroy');
+Route::resource('cast', 'CastController');
 
 // CRUD Genre
-Route::get('/genre', 'GenreController@index');
-Route::get('/genre/create', 'GenreController@create');
-Route::post('/genre', 'GenreController@store');
-Route::get('/genre/{genre_id}', 'GenreController@show');
-Route::get('/genre/{genre_id}/edit', 'GenreController@edit');
-Route::put('/genre/{genre_id}', 'GenreController@update');
-Route::delete('/genre/{genre_id}', 'GenreController@destroy');
+Route::resource('genre', 'GenreController');
 
 // CRUD Film
 Route::resource('film', 'FilmController');
