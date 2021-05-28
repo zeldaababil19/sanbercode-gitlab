@@ -1,50 +1,33 @@
+
 <div class="col-lg-4 col-md-6 col-sm-8">
   <div class="product__sidebar">
       
-<div class="product__sidebar__comment">
-<div class="section-title">
-<h5>New Comment</h5>
-</div>
-<div class="product__sidebar__comment__item">
-<div class="product__sidebar__comment__item__pic">
-<img src="{{asset('anime/img/sidebar/comment-1.jpg')}}" alt="">
-</div>
-<div class="product__sidebar__comment__item__text">
-<ul>
-  <li>Active</li>
-  <li>Movie</li>
-</ul>
-<h5><a href="#">The Seven Deadly Sins: Wrath of the Gods</a></h5>
-<span><i class="fa fa-eye"></i> 19.141 Viewes</span>
-</div>
-</div>
-<div class="product__sidebar__comment__item">
-<div class="product__sidebar__comment__item__pic">
-<img src="{{asset('anime/img/sidebar/comment-2.jpg')}}" alt="">
-</div>
-<div class="product__sidebar__comment__item__text">
-<ul>
-  <li>Active</li>
-  <li>Movie</li>
-</ul>
-<h5><a href="#">Shirogane Tamashii hen Kouhan sen</a></h5>
-<span><i class="fa fa-eye"></i> 19.141 Viewes</span>
-</div>
-</div>
-<div class="product__sidebar__comment__item">
-<div class="product__sidebar__comment__item__pic">
-<img src="{{asset('anime/img/sidebar/comment-3.jpg')}}" alt="">
-</div>
-<div class="product__sidebar__comment__item__text">
-<ul>
-  <li>Active</li>
-  <li>Movie</li>
-</ul>
-<h5><a href="#">Kizumonogatari III: Reiket su-hen</a></h5>
-<span><i class="fa fa-eye"></i> 19.141 Viewes</span>
-</div>
-</div>
+    <div class="product__sidebar__comment">
+      <div class="section-title">
+        <h5>SideBar</h5>
+      </div>
 
-</div>
-</div>
+      @foreach ($films as $value)
+      <div class="product__sidebar__comment__item">
+        <div class="product__sidebar__comment__item__pic">
+          <img src="{{asset('img/'.$value->poster)}}" alt="">
+        </div>
+        <div class="product__sidebar__comment__item__text">
+          <ul>
+            <li>
+              @foreach ($genres as $item)
+              @if ($item->id == $value->genre_id)
+              <span value="{{$item->id}}">{{$item->nama}}</span>
+              @endif
+              @endforeach
+            </li>
+          </ul>
+          <h5><a href="#">{{$value->judul}}</a></h5>
+          <span>{{$value->tahun}}</span>
+        </div>
+      </div>
+      @endforeach
+
+    </div>
+  </div>
 </div>

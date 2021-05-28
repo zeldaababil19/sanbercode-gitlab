@@ -17,8 +17,11 @@ class FilmController extends Controller
      */
     public function index()
     {
-        $films = film::all();
-        return view('film.index', compact('films'));
+        $film = film::all();
+        $genre = genre::all();
+        $films = film::limit(4)->get();
+        $genres = genre::limit(4)->get();
+        return view('film.index', compact('film', 'genre', 'films', 'genres'));
     }
 
     /**
@@ -123,7 +126,7 @@ class FilmController extends Controller
             ];
         }else{
             $film_data = [
-                'judul' => $request->judul,
+            'judul' => $request->judul,
             'ringkasan' => $request->ringkasan,
             'tahun' => $request->tahun,
             'genre_id' => $request->genre_id
@@ -149,5 +152,19 @@ class FilmController extends Controller
         File::delete($path . $film->poster);
 
         return redirect('/film');
+    }
+
+    public function watch($id)
+    {
+        $genre = Genre::all();
+        $film = Film::findorfail($id);
+        return view('film.watch', compact('film', 'genre'));
+    }
+    
+    public function sidebar($id)
+    {
+        $films = film::limit(3)->get();
+        $genre = genre::limit(3)->get();
+        return view('film.sidebar', compact('films', 'genre'));
     }
 }

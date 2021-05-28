@@ -22,9 +22,12 @@ Route::resource('cast', 'CastController');
 
 // CRUD Genre
 Route::resource('genre', 'GenreController');
+Route::get('/genre/{genre}', 'GenreController@film');
 
 // CRUD Film
 Route::resource('film', 'FilmController');
+Route::get('/film/{film_id}/watch', 'FilmController@watch');
+Route::get('/film', 'FilmController@sidebar');
 
 Route::get('/home', 'HomeController@index')->name('home');
 

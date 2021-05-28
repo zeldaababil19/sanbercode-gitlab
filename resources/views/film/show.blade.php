@@ -2,7 +2,26 @@
 
 @section('content')
 
-        @include('partial.breadcum')
+<div class="breadcrumb-option">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumb__links">
+                    <a href="/">
+                        <i class="fa fa-home"></i> Home</a>
+                    <a href="/genre/film">Genre</a>
+                    <span>
+                        @foreach ($genre as $value)
+                        @if ($value->id == $film->genre_id)
+                        <span value="{{$value->id}}">{{$value->nama}}</span>
+                        @endif
+                        @endforeach
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
         <!-- Anime Section Begin -->
         <section class="anime-details spad">
@@ -106,13 +125,15 @@
                                     </div>
                                 </div>
                                 <div class="anime__details__btn">
-                                    <a href="#" class="follow-btn"
-                                        ><i class="fa fa-heart-o"></i> Follow</a
-                                    >
-                                    <a href="#" class="watch-btn"
-                                        ><span>Watch Now</span>
-                                        <i class="fa fa-angle-right"></i
-                                    ></a>
+                                    <a href="#" class="follow-btn">
+                                        <i class="fa fa-heart-o"></i> Follow
+                                    </a>
+                                    
+                                    <a href="/film/{{$film->id}}/watch" class="watch-btn">
+                                        <span>Watch Now</span>
+                                        <i class="fa fa-angle-right"></i>
+                                    </a>
+                                    
                                 </div>
                             </div>
                         </div>

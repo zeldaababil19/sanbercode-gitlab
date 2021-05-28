@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\genre;
+use App\Film;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -32,8 +33,8 @@ class GenreController extends Controller
 
     public function show($id)
     {
-        $genres = DB::table('genre')->where('id', $id)->first();
-        return view('genre.show', compact('genres'));
+        $genre = DB::table('genre')->where('id', $id)->first();
+        return view('genre.show', compact('genre'));
     }
 
     public function edit($id)
@@ -60,5 +61,11 @@ class GenreController extends Controller
     {
         $query = DB::table('genre')->where('id', $id)->delete();
         return redirect('/genre');
+    }
+
+    public function film()
+    {
+        $genre = genre::all();
+        return view('genre.film', compact('genre'));
     }
 }
