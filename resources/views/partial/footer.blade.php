@@ -14,10 +14,10 @@
                 <div class="col-lg-6">
                     <div class="footer__nav">
                         <ul>
-                            <li class="active"><a href="./index.html">Homepage</a></li>
-                            <li><a href="./categories.html">Categories</a></li>
-                            <li><a href="./blog.html">Our Blog</a></li>
-                            <li><a href="#">Contacts</a></li>
+                            <li><a href="/">Homepage</a></li>
+                                <li><a href="/genre/{genre}/film">All Anime</a></li>
+                                <li><a href="/cast">Studio</a></li>
+                                <li><a href="/genre">Genre</a></li>
                         </ul>
                     </div>
                 </div>

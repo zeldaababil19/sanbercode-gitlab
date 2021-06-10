@@ -6,13 +6,14 @@
 
 @section('content')
     <div>
-    <h2>Edit genre {{$genre->id}}</h2>
-    <form action="/genre/{{$genre->id}}" method="POST">
+    <h2> <span class="badges badge-primary">Edit genre {{$genres->id}} </span></h2>
+    <br>
+    <form action="/genre/{{$genres->id}}" method="POST">
         @csrf
         @method('PUT')
         <div class="form-group">
-            <label for="nama">Nama</label>
-            <input type="text" class="form-control" name="nama" value="{{$genre->nama}}" id="nama" placeholder="Masukkan Nama">
+            <label for="nama"> <span class="badges badge-primary">Nama</span></label>
+            <input type="text" class="form-control" name="nama" value="{{$genres->nama}}" id="nama" placeholder="Masukkan Nama">
             @error('nama')
                 <div class="alert alert-danger">
                     {{ $message }}

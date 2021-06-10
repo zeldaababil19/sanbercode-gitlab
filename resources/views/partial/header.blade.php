@@ -15,7 +15,7 @@
                         <nav class="header__menu mobile-menu">
                             <ul>
                                 <li><a href="/">Homepage</a></li>
-                                <li><a href="/genre/film">All Anime</a></li>
+                                <li><a href="/genre/{genre}/film">All Anime</a></li>
                                 <li><a href="/cast">Studio</a></li>
                                 <li><a href="/genre">Genre</a></li>
                             </ul>

@@ -48,6 +48,8 @@ class FilmController extends Controller
             'tahun' => 'required',
             'genre_id' => 'required',
             'ringkasan' => 'required',
+            'rating' => 'required',
+            'eps' => 'required',
             'poster' => 'required|mimes:jpeg,jpg,png,gif',
         ]);
 
@@ -58,6 +60,8 @@ class FilmController extends Controller
             'judul' => $request->judul,
             'ringkasan' => $request->ringkasan,
             'tahun' => $request->tahun,
+            'rating' => $request->rating,
+            'eps' => $request->eps,
             'genre_id' => $request->genre_id,
             'poster'=> $name_img
         ]);
@@ -106,6 +110,8 @@ class FilmController extends Controller
             'tahun' => 'required',
             'genre_id' => 'required',
             'ringkasan' => 'required',
+            'rating' => 'required',
+            'eps' => 'required',
             'poster' => 'mimes:jpeg,jpg,png,gif',
         ]);
 
@@ -121,6 +127,8 @@ class FilmController extends Controller
                 'judul' => $request->judul,
             'ringkasan' => $request->ringkasan,
             'tahun' => $request->tahun,
+            'eps' => $request->eps,
+            'rating' => $request->rating,
             'genre_id' => $request->genre_id,
             'poster'=> $new_gambar
             ];
@@ -129,6 +137,8 @@ class FilmController extends Controller
             'judul' => $request->judul,
             'ringkasan' => $request->ringkasan,
             'tahun' => $request->tahun,
+            'eps' => $request->eps,
+            'rating' => $request->rating,
             'genre_id' => $request->genre_id
             ];
         }

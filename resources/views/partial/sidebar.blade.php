@@ -23,7 +23,7 @@
             </li>
           </ul>
           <h5><a href="#">{{$value->judul}}</a></h5>
-          <span>{{$value->tahun}}</span>
+          <span><i class="fa fa-calendar"></i> {{$value->tahun}}</span>
         </div>
       </div>
       @endforeach

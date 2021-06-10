@@ -1,9 +1,5 @@
 @extends('layout.master')
 
-@section('title')
-    List Genre
-@endsection
-
 @section('content')
 <a href="/genre/create" class="btn btn-primary my-2">Tambah</a>
         <table class="table">
@@ -17,8 +13,8 @@
             <tbody>
                 @forelse ($genres as $key=>$value)
                     <tr>
-                        <td>{{$key + 1}}</th>
-                        <td>{{$value->nama}}</td>
+                        <td><span class="btn btn-primary">{{$key + 1}}</span></th>
+                        <td><span class="btn btn-primary">{{$value->nama}}</span></td>
                         <td>
                             <a href="/genre/{{$value->id}}" class="btn btn-info">Show</a>
                             <a href="/genre/{{$value->id}}/edit" class="btn btn-primary">Edit</a>

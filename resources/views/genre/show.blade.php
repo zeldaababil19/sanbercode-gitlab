@@ -2,5 +2,5 @@
 
 @section('content')
 
-<h4>Nama : {{$genre->nama}}</h4>
+<h4> <span class="badges badge-primary"> Nama : {{$genre->nama}}</span></h4>
 @endsection

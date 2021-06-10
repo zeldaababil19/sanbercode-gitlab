@@ -32,6 +32,24 @@
                 @enderror
             </div>
             <div class="form-group">
+                <label for="eps"><span class="badge badge-primary">Eps</span></label>
+                <input type="text" class="form-control" name="eps" id="eps" placeholder="Masukkan eps">
+                @error('eps')
+                    <div class="alert alert-danger">
+                        {{ $message }}
+                    </div>
+                @enderror
+            </div>
+            <div class="form-group">
+                <label for="rating"><span class="badge badge-primary">Rating</span></label>
+                <input type="number" class="form-control" name="rating" id="rating" placeholder="Masukkan rating">
+                @error('rating')
+                    <div class="alert alert-danger">
+                        {{ $message }}
+                    </div>
+                @enderror
+            </div>
+            <div class="form-group">
                 <label for="genre"><span class="badge badge-primary">Genre</span></label> <br>
                 <select name="genre_id" id="form-control">
                 <option value="">-</option>

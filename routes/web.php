@@ -22,7 +22,7 @@ Route::resource('cast', 'CastController');
 
 // CRUD Genre
 Route::resource('genre', 'GenreController');
-Route::get('/genre/{genre}', 'GenreController@film');
+Route::get('/genre/{genre}/film', 'GenreController@film');
 
 // CRUD Film
 Route::resource('film', 'FilmController');

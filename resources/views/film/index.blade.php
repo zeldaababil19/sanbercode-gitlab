@@ -22,8 +22,8 @@
                       <div class="col-lg-4 col-md-6 col-sm-6">
                           <div class="product__item">
                               <div class="product__item__pic set-bg" data-setbg="{{asset('img/'.$value->poster)}}">
-                                  <div class="ep">eps 18 / 18</div>
-                                  <div class="comment"><i class="fa fa-comments"></i> 11</div>
+                                  <div class="ep">eps {{$value->eps}}</div>
+                                  <div class="comment"><i class="fa fa-star"></i>{{$value->rating}}</div>
                                   <div class="view"><i class="fa fa-calendar"></i> {{$value->tahun}}</div>
                               </div>
                               <div class="product__item__text">

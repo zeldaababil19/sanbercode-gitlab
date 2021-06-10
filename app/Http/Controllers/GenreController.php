@@ -66,6 +66,9 @@ class GenreController extends Controller
     public function film()
     {
         $genre = genre::all();
-        return view('genre.film', compact('genre'));
+        $film = film::all();
+        $films = film::limit(4)->get();
+        $genres = genre::limit(4)->get();
+        return view('genre.film', compact('genre', 'film' , 'films', 'genres'));
     }
 }
